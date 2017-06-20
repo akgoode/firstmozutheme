@@ -6,7 +6,7 @@
     "isDesktop": true,
     "isMobile": false,
     "isTablet": false,
-    "name": "firstTheme",
+    "name": "ThemeTraining",
     "allowProduction": true,
     "baseTheme": "https://github.com/mozu/core-theme.git",
     "baseThemeVersion": {
