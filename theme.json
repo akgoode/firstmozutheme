@@ -396,6 +396,7 @@
     ],
     "defaultPageSize": 15,
     "defaultSort": "createDate asc",
+    "enableOverdrive": false,
     "enablePartialCaching": true,
     "loadGoogleFonts": [
       "Source Sans Pro"
@@ -421,9 +422,11 @@
     ],
     "preselectCountryCode": "US",
     "productImagesContainerWidth": 350,
+    "randomText": "default",
     "requireCheckoutAgreeToTerms": true,
     "suggestPriorSearchTerms": true,
     "searchExpandOnFocus": true,
+    "selectInterests": [],
     "showAddressTypeDropdown": true,
     "showBreadcrumbs": true,
     "showCartItemDimensions": true,
