@@ -1,8 +1,8 @@
 ﻿<div class="mz-productlisting {% block module-classes %}{% endblock module-classes %}" data-mz-product="{{ model.productCode }}">
 
+    <a class="mz-productlisting-title" href="{% make_url "product" model %}">{{model.content.productName}}</a>
 
     <div class="mz-productlisting-info">
-        <a class="mz-productlisting-title" href="{% make_url "product" model %}">{{model.content.productName}}</a>
         <div class="mz-productlisting-image">
             {% block product-image %}
             <a href="{% make_url "product" model %}">
@@ -14,7 +14,7 @@
             </a>
             {% endblock product-image %}
         </div>
-        
+
         {% if model.content.productShortDescription and themeSettings.listProductShortDesc %}
         <p class="mz-productlisting-shortdesc">{{ model.content.productShortDescription|truncatewords(themeSettings.maxProductSummaryWords)|safe }}</p>
         {% endif %}
