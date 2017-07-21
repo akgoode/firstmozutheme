@@ -1,0 +1,3 @@
+model.config.season
+
+{% include_products "modules/product/product-listing" with filter=properties.best-season eq "summer" as_parameter %}

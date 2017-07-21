@@ -774,6 +774,27 @@
   ],
   "widgets": [
     {
+      "displayName": "Best Season Display",
+      "displayTemplate": "misc/best-season",
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Season",
+          "name": "season",
+          "xtype": "mz-input-selectMulti",
+          "store": [
+            "Spring",
+            "Summer",
+            "Fall",
+            "Winter"
+          ]
+        }
+      ],
+      "icon": "/resources/admin/widgets/09_slideshow.png",
+      "id": "best-season",
+      "validPageTypes": ["*"]
+    },
+    {
       "defaultConfig": {
         "field1": "Name",
         "field2": "Age",

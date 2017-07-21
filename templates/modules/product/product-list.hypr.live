@@ -1,5 +1,6 @@
 ﻿<div class="mz-productlist {% block module-classes %}{% endblock module-classes %}">
     {% if model.items %}
+    {{ model.items.count }}
         {% dropzone "first-product-tile" scope="page" %}
         <ul class="mz-productlist-list {% block list-classes %}{% endblock list-classes %}">
             {% for prod in model.items %}

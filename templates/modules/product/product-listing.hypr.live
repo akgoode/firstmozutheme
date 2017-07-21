@@ -51,5 +51,6 @@
           {% endif %}
         {% endif %}
         {% endblock product-extrainfo %}
+        Best Season: {% for value in model|get_product_attribute_values("tenant~best-season") %} {{value}}{% if not forloop.last %}, {% endif %} {% endfor %}
     </div>
 </div>

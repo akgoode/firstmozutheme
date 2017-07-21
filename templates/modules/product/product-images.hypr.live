@@ -12,4 +12,3 @@
 {% else %}
 <span class="mz-productimages-noimage">[{{ labels.noImages}}]</span>
 {% endif %}
-

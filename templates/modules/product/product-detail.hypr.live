@@ -28,6 +28,7 @@
 	<dt class="mz-productcodes-upc-label">{{ labels.upc }}</dt>
 	<dd class="mz-productcodes-upc" itemprop="mpn">{{ model.upc|first }}</dd>
 	{% endif %}
+  <br/><dt class="mz-productcodes-upc-label">Best Season</dt>{% for value in model|get_product_attribute_values("tenant~best-season") %} {{value}}{% if not forloop.last %}, {% endif %} {% endfor %}
 </dl>
 
 <section class="mz-l-stack-section mz-productdetail-conversion">
@@ -118,17 +119,17 @@
       <dd itemprop="weight" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageWeight.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageWeight.unit }}</span>
 	  </dd>
-	  
+
 	  <dt>{{ labels.length }}</dt>
       <dd itemprop="length" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageLength.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageLength.unit }}</span>
 	  </dd>
-    
+
 	  <dt>{{ labels.width }}</dt>
       <dd itemprop="width" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageWidth.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageWidth.unit }}</span>
 	  </dd>
-    
+
 	  <dt>{{ labels.height }}</dt>
       <dd itemprop="height" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageHeight.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageHeight.unit }}</span>
@@ -144,7 +145,7 @@
 {% if themeSettings.showProductDetailMeasurements and model.bundledProducts %}
 <div class="mz-productdetail-measurements mz-l-stack-section">
   <h4 class="mz-l-stack-sectiontitle">{{ labels.measurements }}</h4>
-  
+
   {% for product in model.bundledProducts %}
     {% if product.measurements %}
     <div class="mz-productbundle-measurements-product">
@@ -175,5 +176,7 @@
       </dl>
     {% endif %}
   {% endfor %}
+
 </div>
 {% endif %}
+{% dump model %}
